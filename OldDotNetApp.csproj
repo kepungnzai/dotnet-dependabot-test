@@ -1,0 +1,104 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <!-- GENUINELY OUTDATED PACKAGES (2019-2021 era) -->
+  <!-- These packages are 3-5+ MAJOR versions behind current -->
+  
+  <ItemGroup>
+    <!-- Newtonsoft.Json: 11.0.2 (2018) → Current: 13.0.3 -->
+    <!-- SECURITY: Multiple CVEs in old versions -->
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    
+    <!-- Entity Framework Core: 2.2.0 (2019) → Current: 7.0+ or 8.0+ -->
+    <!-- CRITICAL: Net Core 2.2 is EOL, EF has breaking changes -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+    <!-- System.Net.Http: 4.3.2 (2017) → Removed/integrated into framework -->
+    <!-- Known vulnerabilities and deprecated -->
+    <PackageReference Include="System.Net.Http" Version="4.3.2" />
+
+    <!-- System.Net.Security: 4.3.2 (2017) → Current: integrated -->
+    <!-- Has known security issues -->
+    <PackageReference Include="System.Net.Security" Version="4.3.2" />
+
+    <!-- Serilog: 2.5.0 (2017) → Current: 3.0+ -->
+    <!-- Multiple major versions behind -->
+    <PackageReference Include="Serilog" Version="2.5.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.0.1" />
+
+    <!-- AutoMapper: 8.0.0 (2019) → Current: 12.0+ -->
+    <!-- 4 major versions behind -->
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
+
+    <!-- FluentValidation: 8.0.0 (2019) → Current: 11.0+ -->
+    <!-- 3 major versions behind -->
+    <PackageReference Include="FluentValidation" Version="8.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.0.0" />
+
+    <!-- Serilog.AspNetCore: 2.0.0 (2017) → Current: 6.0+ -->
+    <!-- VERY OLD: 6 major versions behind -->
+    <PackageReference Include="Serilog.AspNetCore" Version="2.0.0" />
+
+    <!-- NLog: 4.5.0 (2018) → Current: 5.0+ -->
+    <!-- Multiple security patches missed -->
+    <PackageReference Include="NLog" Version="4.5.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.5.0" />
+
+    <!-- Polly: 5.9.0 (2018) → Current: 8.0+ -->
+    <!-- 3 major versions behind, missing resilience improvements -->
+    <PackageReference Include="Polly" Version="5.9.0" />
+
+    <!-- Castle.Core: 4.3.1 (2018) → Current: 5.0+ -->
+    <!-- Old reflection library with known issues -->
+    <PackageReference Include="Castle.Core" Version="4.3.1" />
+
+    <!-- log4net: 2.0.8 (2017) → Current: 2.0.15+ -->
+    <!-- Known remote code execution vulnerability (CVE-2019-0600+) -->
+    <PackageReference Include="log4net" Version="2.0.8" />
+
+    <!-- Newtonsoft.Json.Schema: 3.0.10 (2017) → Current: 3.0.15+ -->
+    <!-- Outdated JSON schema validator -->
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.10" />
+
+    <!-- Moq: 4.8.0 (2018) → Current: 4.18.0+ -->
+    <!-- Old test mock library -->
+    <PackageReference Include="Moq" Version="4.8.0" />
+
+    <!-- xunit: 2.3.1 (2018) → Current: 2.6.0+ -->
+    <!-- Old testing framework -->
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+
+    <!-- NSubstitute: 3.1.0 (2018) → Current: 5.0+ -->
+    <!-- Old test substitute library -->
+    <PackageReference Include="NSubstitute" Version="3.1.0" />
+
+    <!-- MediatR: 5.1.0 (2018) → Current: 12.0+ -->
+    <!-- 7 major versions behind! -->
+    <PackageReference Include="MediatR" Version="5.1.0" />
+
+    <!-- Swagger/Swashbuckle: 2.5.0 (2017) → Current: 6.0+ -->
+    <!-- VERY OLD OpenAPI generator -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.5.0" />
+
+    <!-- Microsoft.AspNetCore.Mvc.Versioning: 2.3.0 (2018) → Current: 5.0+ -->
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.3.0" />
+
+    <!-- RestSharp: 105.2.3 (2017) → Current: 107.0+ -->
+    <!-- Old HTTP client with known security issues -->
+    <PackageReference Include="RestSharp" Version="105.2.3" />
+
+  </ItemGroup>
+
+</Project>
